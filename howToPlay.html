@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OnlineChess</title>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <!-- JavaScript tags -->
+        <script type="text/javascript"> if (!window.console) console = {log: function() {}}; </script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/definitions.js"></script>
+        <script src="PAGE&PASE/Enviroment/gameBoard.js"></script>
+        <script src="PAGE&PASE/Actuators/moves.js"></script>
+        <script src="PAGE&PASE/Actuators/pvList.js"></script>
+        <script src="PAGE&PASE/Action/makeMove.js"></script>
+        <script src="Agent/agent.js"></script>
+        <script src="PAGE&PASE/Action/evaluate.js"></script>
+        <script src="PAGE&PASE/Preceptors/userMoves.js"></script>
+        <script src="PAGE&PASE/Actuators/gui.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Sound effects -->
+        <audio id="moveAudio"><source src="includes/move.wav" type="audio/mpeg"></audio>
+        <audio id="winAudio"><source src="includes/win.mp3" type="audio/mpeg"></audio>
+        <audio id="loseAudio"><source src="includes/lose.mp3" type="audio/mpeg"></audio>
+        <audio id="drawAudio"><source src="includes/draw.mp3" type="audio/mpeg"></audio>
+
+
+        <!-- Favicon Tag -->
+        <link rel="shortcut icon" type="image/png" href="pics/favicon.png">
+        <!-- Mobile Meta Tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="includes/bootstrap.min.css" rel="stylesheet">
+        <link href="includes/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container-full">
+                <ul>
+                    <li style="width:100px; margin-right:10px;"><img src="pics/logo.png" style="width:100%;"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="howToPlay.html">How To Play</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="algorithm.html">Algoritm</a></li>
+                    <li style="float:right; background-color:#452737;"><a href="ticTacToe.html">Tic Tac Toe</a></li>
+                </ul>
+            </div>
+		</header>
+        <div class="container-fluid">
+                <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="page">
+                        <div class="row">
+                        <div class="col-md-2" ></div>
+                        <div class="col-md-8" style ="margin-top: 40px">
+                            <img class="rounded" src="pics/bg.jpeg" />
+                            <h2 class="h2">How to Play Chess | Rules + 4 Steps to Begin</h2><br />
+                            <h4 class="h4 title1">1. Set up chess Bord</h4><br />
+                            <img class="rounded" src="pics/brd.gif" /><br /><br />
+                            <p style="color: #311c27; width: 100%;">At the beginning of the game the chessboard is laid out so that each player has the white (or light) color square in the bottom right-hand side.
+                            The chess pieces are then arranged the same way each time. The second row (or rank) is filled with pawns. The rooks go in the corners, then the knights next to them, followed by the bishops, and finally the queen, who always goes on her own matching color (white queen on white, black queen on black), and the king on the remaining square.</p>
+                            <br /><hr /><br />
+                            <h4 class="h4 title1">2.Discover the Special Rules of Chess</h4><br />
+
+                            <p style="color: #311c27; width: 100%;">There are a few special rules in chess that may not seem logical at first. They were created to make the game more fun and interesting.</p>
+                            <h5 class="h5 subtitle">How to Promote a Pawn in Chess</h5>
+                            <img class="rounded" src="pics/promote.jpg" /><br /><br />
+                            <p>
+                                Pawns have another special ability and that is that if a pawn reaches the other side of the board it can become any other chess piece (called promotion).
+                            </p><br />
+                            <h5 class="h5 subtitle">How to do "en passant" in Chess</h5>
+                            <img class="rounded" src="pics/enPassant.png" /><br /><br />
+                            <p>
+                                The last rule about pawns is called “en passant,” which is French for “in passing”. If a pawn moves out two squares on its first move, and by doing so lands to the side of an opponent's pawn (effectively jumping past the other pawn's ability to capture it), that other pawn has the option of capturing the first pawn as it passes by.
+                                This special move must be done immediately after the first pawn has moved past, otherwise the option to capture it is no longer available. Click through the example below to better understand this odd, but important rule.
+                            </p>
+                            <h5 class="h5 subtitle">How to Castle in Chess</h5>
+                            <img class="rounded" src="pics/castle.png" /><br /><br />
+                            <p>
+                                One other special chess rule is called castling. This move allows you to do two important things all in one move: get your king to safety (hopefully), and get your rook out of the corner and into the game. On a player's turn he may move his king two squares over to one side and then move the rook from that side's corner to right next to the king on the opposite side. (See the example below.) However, in order to castle, the following conditions must be met:
+
+                                it must be that king's very first move,
+                                it must be that rook's very first move,
+                                there cannot be any pieces between the king and rook to move and
+                                the king may not be in check or pass through check.</p><br /><hr /><br />
+                                <h4 class="h4 title1">3. Find out Who Makes the First Move in Chess</h4><br />
+                            <p>
+                                The player with the white pieces always moves first. Therefore, players generally decide who will get to be white by chance or luck such as flipping a coin or having one player guess the color of the hidden pawn in the other player's hand. White then makes a move, followed by black, then white again, then black and so on until the end of the game. Being able to move first is a tiny advantage which gives the white player an opportunity to attack right away.
+                            </p><br /><hr /><br />
+                            <h4 class="h4 title1">4. How to get a Draw</h4><br />
+                            <p>
+                                Occasionally chess games do not end with a winner, but with a draw. There are 5 reasons why a chess game may end in a draw:
+                                The position reaches a stalemate where it is one player's turn to move, but his king is NOT in check and yet he does not have another legal move:
+                                There are not enough pieces on the board to force a checkmate (example: a king and a bishop vs.a king) or
+                                A player declares a draw if the same exact position is repeated three times (though not necessarily three times in a row) or
+                                Fifty consecutive moves have been played where neither player has moved a pawn or captured a piece.
+                            </p></p><br /><hr /><br />
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-2"></div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OnlineChess</title>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <!-- JavaScript tags -->
+        <script type="text/javascript"> if (!window.console) console = {log: function() {}}; </script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/definitions.js"></script>
+        <script src="PAGE&PASE/Enviroment/gameBoard.js"></script>
+        <script src="PAGE&PASE/Actuators/moves.js"></script>
+        <script src="PAGE&PASE/Actuators/pvList.js"></script>
+        <script src="PAGE&PASE/Action/makeMove.js"></script>
+        <script src="Agent/agent.js"></script>
+        <script src="PAGE&PASE/Action/evaluate.js"></script>
+        <script src="PAGE&PASE/Preceptors/userMoves.js"></script>
+        <script src="PAGE&PASE/Actuators/gui.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Sound effects -->
+        <audio id="moveAudio"><source src="includes/move.wav" type="audio/mpeg"></audio>
+        <audio id="winAudio"><source src="includes/win.mp3" type="audio/mpeg"></audio>
+        <audio id="loseAudio"><source src="includes/lose.mp3" type="audio/mpeg"></audio>
+        <audio id="drawAudio"><source src="includes/draw.mp3" type="audio/mpeg"></audio>
+
+
+        <!-- Favicon Tag -->
+        <link rel="shortcut icon" type="image/png" href="pics/favicon.png">
+        <!-- Mobile Meta Tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="includes/bootstrap.min.css" rel="stylesheet">
+        <link href="includes/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container-full">
+                <ul>
+                    <li style="width:100px; margin-right:10px;"><img src="pics/logo.png" style="width:100%;"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="howToPlay.html">How To Play</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li class="active"><a href="algorithm.html">Algoritm</a></li>
+
+                    <li style="float:right; background-color:#452737;"><a href="ticTacToe.html">Tic Tac Toe</a></li>
+                </ul>
+            </div>
+		</header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="page">
+                        <h2 class="h2">Minimax Algorithm</h2><br /><br />
+                        <div class="row">
+
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+
+                                <img class="rounded" src="pics/algo.png"/><br /><br />
+
+                            </div><br /><br />
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                <p>Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assuming that your opponent also plays optimally. It is widely used in two player turn-based games such as Tic-Tac-Toe, Backgammon, Mancala, Chess, etc.
+                                    In Minimax the two players are called maximizer and minimizer. The maximizer tries to get the highest score possible while the minimizer tries to do the opposite and get the lowest score possible.
+                                    Every board state has a value associated with it. In a given state if the maximizer has upper hand then, the score of the board will tend to be some positive value. If the minimizer has the upper hand in that board state then it will tend to be some negative value. The values of the board are calculated by some heuristics which are unique for every type of game.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-2"></div>
+            </div>
+        </div>
+
+    </body>
+</html>

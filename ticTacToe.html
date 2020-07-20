@@ -1,0 +1,77 @@
+<!--
+Abdelrahman Essam 155295
+  Marwan Mohamed 152282
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OnlineChess</title>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- JavaScript tags -->
+    <script type="text/javascript"> if (!window.console) console = {log: function() {}}; </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/definitions.js"></script>
+    <script src="Agent/agent.js"></script>
+    <script src="PAGE&PASE/Actuators/gui.js"></script>
+    <!-- Sound effects -->
+    <audio id="winAudio"><source src="includes/win.mp3" type="audio/mpeg"></audio>
+    <audio id="loseAudio"><source src="includes/lose.mp3" type="audio/mpeg"></audio>
+    <audio id="drawAudio"><source src="includes/draw.mp3" type="audio/mpeg"></audio>
+    <!-- Favicon Tag -->
+    <link rel="shortcut icon" type="image/png" href="pics/favicon.png">
+    <!-- Mobile Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="includes/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container-full">
+            <ul>
+                <li style="width:100px; margin-right:10px;"><img src="pics/logo.png" style="width:100%;"></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="howToPlay.html">How To Play</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="algorithm.html">Algoritm</a></li>
+                <link href="includes/style.css" rel="stylesheet">
+                <li class="active" style="float:right; background-color:#452737;"><a href="ticTacToe.html">Tic Tac Toe</a></li>
+            </ul>
+        </div>
+
+    </header>
+    <div class= "col-md-12">
+        <table>
+		<tr>
+			<td class="box" id="0"></td>
+			<td class="box" id="1"></td>
+			<td class="box" id="2"></td>
+		</tr>
+		<tr>
+			<td class="box" id="3"></td>
+			<td class="box" id="4"></td>
+			<td class="box" id="5"></td>
+		</tr>
+		<tr>
+			<td class="box" id="6"></td>
+			<td class="box" id="7"></td>
+			<td class="box" id="8"></td>
+		</tr>
+	</table>
+          <input class="btn btn-primary" id="ReplayBtn" type="submit" value="Replay " onclick="reset();" style="margin-top:20px; ">
+	    <div class="endMessage">
+		  <div class="text"></div>
+        </div>
+        
+       
+    </div>
+
+           
+
+    
+  <script src="js/XOmain.js"></script>
+</body>
+</html>
